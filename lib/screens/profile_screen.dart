@@ -84,15 +84,54 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 padding: EdgeInsets.symmetric(
                     horizontal: ScreenUtil().setWidth(20)),
                 child: SizedBox(
-                  height: ScreenUtil().setHeight(300),
+                  height: ScreenUtil().setHeight(500),
                   child: GridView.count(
-                    padding: EdgeInsets.zero,
+                    physics: const NeverScrollableScrollPhysics(),
+                    padding: EdgeInsets.only(top: ScreenUtil().setHeight(10)),
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
                     crossAxisCount: 2,
-                    childAspectRatio: 3 / 4,
-                    children: const [
-                      // TODO: Create 5 Recommended for you Items [Use CustomVerticalProductCard]
+                    childAspectRatio: 0.75,
+                    // REMOVED 'const' from children list below
+                    children: [
+                      // ------------------------------------------------
+                      // 5 HARD CODED RECOMMENDED ITEMS
+                      // ------------------------------------------------
+                      CustomVerticalProductCard(
+                        prodName: 'Nike Air Max',
+                        prodPrice: '₱4,500.00',
+                        prodImage: 'assets/images/nubdexchange_logo.png',
+                        prodSize: '9 US',
+                        numStars: 5,
+                      ),
+                      CustomVerticalProductCard(
+                        prodName: 'Adidas Ultraboost',
+                        prodPrice: '₱8,000.00',
+                        prodImage: 'assets/images/nubdexchange_logo.png',
+                        prodSize: '10 US',
+                        numStars: 4,
+                      ),
+                      CustomVerticalProductCard(
+                        prodName: 'Puma Suede',
+                        prodPrice: '₱3,200.00',
+                        prodImage: 'assets/images/nubdexchange_logo.png',
+                        prodSize: '8.5 US',
+                        numStars: 4,
+                      ),
+                      CustomVerticalProductCard(
+                        prodName: 'Converse Chucks',
+                        prodPrice: '₱3,500.00',
+                        prodImage: 'assets/images/nubdexchange_logo.png',
+                        prodSize: '9 US',
+                        numStars: 5,
+                      ),
+                      CustomVerticalProductCard(
+                        prodName: 'Vans Slip-On',
+                        prodPrice: '₱2,800.00',
+                        prodImage: 'assets/images/nubdexchange_logo.png',
+                        prodSize: '9 US',
+                        numStars: 4,
+                      ),
                     ],
                   ),
                 ),
@@ -111,6 +150,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
               SizedBox(height: ScreenUtil().setHeight(10)),
               TabBar(
                 indicatorColor: NU_BLUE,
+                labelColor: NU_BLUE,
+                unselectedLabelColor: Colors.grey,
                 tabs: [
                   Tab(
                     child: CustomText(
@@ -155,7 +196,34 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget _toPay() {
     return Column(
       children: [
-        // TODO: Create 2 toPay CustomHorizontalProductCard [set isCheckout to true]
+        SizedBox(height: ScreenUtil().setHeight(10)),
+        // ------------------------------------------------
+        // 2 HARD CODED TO PAY ITEMS
+        // ------------------------------------------------
+        Padding(
+          padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
+          child: CustomHorizontalProductCard( // Removed const
+            prodName: 'Gaming Mouse',
+            prodPrice: '₱1,500.00',
+            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodSize: 'N/A',
+            numStars: 5,
+            isCheckout: true,
+            btnName: 'Pay Now',
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
+          child: CustomHorizontalProductCard( // Removed const
+            prodName: 'Mechanical Keyboard',
+            prodPrice: '₱3,500.00',
+            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodSize: 'Full',
+            numStars: 5,
+            isCheckout: true,
+            btnName: 'Pay Now',
+          ),
+        ),
       ],
     );
   }
@@ -163,7 +231,46 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget _toShip() {
     return Column(
       children: [
-        // TODO: Create 3 toShip CustomHorizontalProductCard [set isCheckout to true]
+        SizedBox(height: ScreenUtil().setHeight(10)),
+        // ------------------------------------------------
+        // 3 HARD CODED TO SHIP ITEMS
+        // ------------------------------------------------
+        Padding(
+          padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
+          child: CustomHorizontalProductCard( // Removed const
+            prodName: 'Wireless Headset',
+            prodPrice: '₱2,500.00',
+            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodSize: 'M',
+            numStars: 4,
+            isCheckout: true,
+            btnName: 'Contact Seller',
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
+          child: CustomHorizontalProductCard( // Removed const
+            prodName: 'Webcam 1080p',
+            prodPrice: '₱1,200.00',
+            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodSize: 'N/A',
+            numStars: 4,
+            isCheckout: true,
+            btnName: 'Contact Seller',
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
+          child: CustomHorizontalProductCard( // Removed const
+            prodName: 'Laptop Stand',
+            prodPrice: '₱800.00',
+            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodSize: 'N/A',
+            numStars: 5,
+            isCheckout: true,
+            btnName: 'Contact Seller',
+          ),
+        ),
       ],
     );
   }
@@ -171,7 +278,58 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget _toReceived() {
     return Column(
       children: [
-        // TODO: Create 4 toReceived CustomHorizontalProductCard [set isCheckout to true]
+        SizedBox(height: ScreenUtil().setHeight(10)),
+        // ------------------------------------------------
+        // 4 HARD CODED TO RECEIVED ITEMS
+        // ------------------------------------------------
+        Padding(
+          padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
+          child: CustomHorizontalProductCard( // Removed const
+            prodName: 'USB-C Hub',
+            prodPrice: '₱1,500.00',
+            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodSize: 'N/A',
+            numStars: 4,
+            isCheckout: true,
+            btnName: 'Rate Now',
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
+          child: CustomHorizontalProductCard( // Removed const
+            prodName: 'Monitor Arm',
+            prodPrice: '₱2,000.00',
+            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodSize: 'N/A',
+            numStars: 5,
+            isCheckout: true,
+            btnName: 'Rate Now',
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
+          child: CustomHorizontalProductCard( // Removed const
+            prodName: 'Desk Mat',
+            prodPrice: '₱500.00',
+            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodSize: 'XL',
+            numStars: 5,
+            isCheckout: true,
+            btnName: 'Rate Now',
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
+          child: CustomHorizontalProductCard( // Removed const
+            prodName: 'Cable Organizer',
+            prodPrice: '₱200.00',
+            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodSize: 'N/A',
+            numStars: 4,
+            isCheckout: true,
+            btnName: 'Rate Now',
+          ),
+        ),
       ],
     );
   }

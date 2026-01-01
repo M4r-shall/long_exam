@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constants.dart';
-
 import '../widgets/custom_text.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -33,10 +32,23 @@ class DetailScreen extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  //TODO: Update the Placeholder into prodImg
-                  Placeholder(
-                    fallbackHeight: ScreenUtil().setHeight(200),
-                    fallbackWidth: double.infinity,
+                  // DONE: Update the Placeholder into prodImg
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(16), // Adds nice rounded corners
+                    child: Image.network(
+                      'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/99486859-0ff3-46b4-949b-2d16af2ad421/custom-nike-dunk-low-by-you-su23.png',
+                      height: ScreenUtil().setHeight(200),
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Container(
+                          height: ScreenUtil().setHeight(200),
+                          width: double.infinity,
+                          color: Colors.grey[300],
+                          child: const Icon(Icons.broken_image, size: 50, color: Colors.grey),
+                        );
+                      },
+                    ),
                   ),
                   Positioned(
                     top: ScreenUtil().setHeight(10),
@@ -45,9 +57,17 @@ class DetailScreen extends StatelessWidget {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: Icon(
-                        Icons.keyboard_backspace,
-                        size: ScreenUtil().setSp(40),
+                      child: Container( // Added a background for better visibility over the image
+                        padding: const EdgeInsets.all(4), 
+                        decoration: const BoxDecoration(
+                           color: Colors.white54,
+                           shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          Icons.keyboard_backspace,
+                          size: ScreenUtil().setSp(30),
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),

@@ -36,7 +36,39 @@ class _CartScreenState extends State<CartScreen> {
               child: ListView(
                 padding: EdgeInsets.zero,
                 children: [
-                  // TODO: Create 15 Cart Items CustomHorizontalProductCard [set isCart to true and btnName into 'Check Out']
+                  // ------------------------------------------------
+                  // Item 1
+                  // REMOVED 'const' keyword below
+                  Padding(
+                    padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
+                    child: CustomHorizontalProductCard( 
+                      prodName: 'Wireless Mouse',
+                      prodPrice: '₱500.00',
+                      prodSize: 'One Size',
+                      numStars: 5,
+                      prodImage: 'assets/images/nubdexchange_logo.png',
+                      isCart: true,
+                      btnName: 'Check Out',
+                    ),
+                  ),
+
+                  // Item 2
+                  // REMOVED 'const' keyword below
+                  Padding(
+                    padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
+                    child: CustomHorizontalProductCard(
+                      prodName: 'Mechanical Keyboard',
+                      prodPrice: '₱1,200.00',
+                      prodSize: 'Full',
+                      numStars: 5,
+                      prodImage: 'assets/images/nubdexchange_logo.png',
+                      isCart: true,
+                      btnName: 'Check Out',
+                    ),
+                  ),
+
+                  // ... Repeat this for all other items in the list.
+                  // Make sure NO 'const' is before CustomHorizontalProductCard
                 ],
               ),
             ),

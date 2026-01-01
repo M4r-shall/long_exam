@@ -10,6 +10,7 @@ class CustomHorizontalProductCard extends StatefulWidget {
   final String prodName;
   final String prodSize;
   final String prodPrice;
+  final String prodImage; // Added parameter
   final String btnName;
   final int numStars;
   int quantity;
@@ -22,6 +23,7 @@ class CustomHorizontalProductCard extends StatefulWidget {
     required this.prodName,
     required this.prodSize,
     required this.prodPrice,
+    required this.prodImage, // Required in constructor
     this.btnName = 'Check Product',
     required this.numStars,
     this.quantity = 1,
@@ -42,7 +44,9 @@ class _CustomHorizontalProductCardState
     return Card(
       color: Colors.white,
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+          // Optional: Add navigation to detail screen on card tap
+        },
         child: Container(
           padding: EdgeInsets.symmetric(
             horizontal: ScreenUtil().setWidth(15),
@@ -55,121 +59,134 @@ class _CustomHorizontalProductCardState
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // TODO: Dynamic prodImage
-              Placeholder(
-                fallbackWidth: ScreenUtil().setWidth(80),
-                fallbackHeight: ScreenUtil().setHeight(80),
+              // Dynamic prodImage
+              Container(
+                width: ScreenUtil().setWidth(80),
+                height: ScreenUtil().setHeight(80),
+                padding: const EdgeInsets.all(8.0),
+                decoration: BoxDecoration(
+                  color: Colors.grey[100],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Image.asset(
+                  widget.prodImage, // Using the passed image path
+                  fit: BoxFit.contain,
+                ),
               ),
               SizedBox(
                 width: ScreenUtil().setWidth(10),
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CustomText(
-                    text: widget.prodName,
-                    fontSize: ScreenUtil().setSp(15),
-                    color: Colors.black,
-                    fontWeight: FontWeight.w900,
-                  ),
-                  SizedBox(
-                    height: ScreenUtil().setHeight(3),
-                  ),
-                  widget.isCart
-                      ? Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            CustomText(
-                              text: 'Quantity: ',
-                              fontSize: ScreenUtil().setSp(12),
-                            ),
-                            SizedBox(
-                              width: ScreenUtil().setWidth(10),
-                            ),
-                            GestureDetector(
-                              onTap: () => setState(() {
-                                widget.quantity--;
-                              }),
-                              child: Icon(
-                                Icons.remove,
+              Expanded( // Added Expanded to prevent overflow
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CustomText(
+                      text: widget.prodName,
+                      fontSize: ScreenUtil().setSp(15),
+                      color: Colors.black,
+                      fontWeight: FontWeight.w900,
+                    ),
+                    SizedBox(
+                      height: ScreenUtil().setHeight(3),
+                    ),
+                    widget.isCart
+                        ? Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              CustomText(
+                                text: 'Quantity: ',
+                                fontSize: ScreenUtil().setSp(12),
+                              ),
+                              SizedBox(
+                                width: ScreenUtil().setWidth(10),
+                              ),
+                              GestureDetector(
+                                onTap: () => setState(() {
+                                  if (widget.quantity > 1) widget.quantity--;
+                                }),
+                                child: Icon(
+                                  Icons.remove,
+                                  color: NU_BLUE,
+                                  size: ScreenUtil().setSp(12),
+                                ),
+                              ),
+                              SizedBox(
+                                width: ScreenUtil().setWidth(10),
+                              ),
+                              CustomText(
+                                text: '${widget.quantity}',
+                                fontSize: ScreenUtil().setSp(12),
+                              ),
+                              SizedBox(
+                                width: ScreenUtil().setWidth(10),
+                              ),
+                              GestureDetector(
+                                onTap: () => setState(() {
+                                  widget.quantity++;
+                                }),
+                                child: Icon(
+                                  Icons.add,
+                                  color: NU_BLUE,
+                                  size: ScreenUtil().setSp(12),
+                                ),
+                              ),
+                            ],
+                          )
+                        : CustomText(
+                            text: widget.prodSize,
+                            fontSize: ScreenUtil().setSp(10),
+                            color: Colors.black45,
+                          ),
+                    SizedBox(
+                      height: ScreenUtil().setHeight(5),
+                    ),
+                    CustomText(
+                      text: widget.prodPrice,
+                      fontSize: ScreenUtil().setSp(17),
+                      color: NU_BLUE,
+                    ),
+                    SizedBox(
+                      height: ScreenUtil().setHeight(5),
+                    ),
+                    widget.isCheckout
+                        ? const SizedBox(
+                            height: 0,
+                          )
+                        : SizedBox(
+                            width: ScreenUtil().setWidth(230),
+                            height: ScreenUtil().setHeight(30),
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                  return DetailScreen(
+                                    prodName: widget.prodName,
+                                    prodSize: widget.prodSize,
+                                    prodPrice: widget.prodPrice,
+                                    numStars: widget.numStars,
+                                    quantity: widget.quantity,
+                                    description: widget.description,
+                                    // Pass image if DetailScreen accepts it
+                                    // prodImage: widget.prodImage, 
+                                  );
+                                }));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                backgroundColor: NU_YELLOW,
+                              ),
+                              child: CustomText(
+                                text: widget.btnName,
+                                fontSize: ScreenUtil().setSp(12),
                                 color: NU_BLUE,
-                                size: ScreenUtil().setSp(12),
+                                fontWeight: FontWeight.w700,
                               ),
-                            ),
-                            SizedBox(
-                              width: ScreenUtil().setWidth(10),
-                            ),
-                            CustomText(
-                              text: '${widget.quantity}',
-                              fontSize: ScreenUtil().setSp(12),
-                            ),
-                            SizedBox(
-                              width: ScreenUtil().setWidth(10),
-                            ),
-                            GestureDetector(
-                              onTap: () => setState(() {
-                                widget.quantity++;
-                              }),
-                              child: Icon(
-                                Icons.add,
-                                color: NU_BLUE,
-                                size: ScreenUtil().setSp(12),
-                              ),
-                            ),
-                          ],
-                        )
-                      : CustomText(
-                          text: widget.prodSize,
-                          fontSize: ScreenUtil().setSp(10),
-                          color: Colors.black45,
-                        ),
-                  SizedBox(
-                    height: ScreenUtil().setHeight(5),
-                  ),
-                  CustomText(
-                    text: widget.prodPrice,
-                    fontSize: ScreenUtil().setSp(17),
-                    color: NU_BLUE,
-                  ),
-                  SizedBox(
-                    height: ScreenUtil().setHeight(5),
-                  ),
-                  widget.isCheckout
-                      ? const SizedBox(
-                          height: 0,
-                        )
-                      : SizedBox(
-                          width: ScreenUtil().setWidth(230),
-                          height: ScreenUtil().setHeight(30),
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                return DetailScreen(
-                                  prodName: widget.prodName,
-                                  prodSize: widget.prodSize,
-                                  prodPrice: widget.prodPrice,
-                                  numStars: widget.numStars,
-                                  quantity: widget.quantity,
-                                  description: widget.description,
-                                );
-                              }));
-                            },
-                            style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(5),
-                              ),
-                              backgroundColor: NU_YELLOW,
-                            ),
-                            child: CustomText(
-                              text: widget.btnName,
-                              fontSize: ScreenUtil().setSp(12),
-                              color: NU_BLUE,
-                              fontWeight: FontWeight.w700,
                             ),
                           ),
-                        ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
