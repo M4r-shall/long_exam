@@ -30,7 +30,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    // TODO: Edit the NetworkImage link into your own image
                     const CircleAvatar(
                       radius: 30,
                       backgroundImage: NetworkImage(
@@ -40,7 +39,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // TODO: Change the name into your own name
                         CustomText(
                           text: 'Marius Panahon',
                           fontSize: ScreenUtil().setSp(25),
@@ -48,7 +46,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           fontWeight: FontWeight.w900,
                         ),
                         SizedBox(height: ScreenUtil().setHeight(3)),
-                        //TODO: Change the coin value into your own value
                         Row(
                           children: [
                             CustomText(
@@ -92,11 +89,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     mainAxisSpacing: 10,
                     crossAxisCount: 2,
                     childAspectRatio: 0.75,
-                    // REMOVED 'const' from children list below
                     children: [
-                      // ------------------------------------------------
-                      // 5 HARD CODED RECOMMENDED ITEMS
-                      // ------------------------------------------------
                       CustomVerticalProductCard(
                         prodName: 'Nike Air Max',
                         prodPrice: '₱4,500.00',
@@ -197,12 +190,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Column(
       children: [
         SizedBox(height: ScreenUtil().setHeight(10)),
-        // ------------------------------------------------
-        // 2 HARD CODED TO PAY ITEMS
-        // ------------------------------------------------
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
-          child: CustomHorizontalProductCard( // Removed const
+          child: CustomHorizontalProductCard(
             prodName: 'Gaming Mouse',
             prodPrice: '₱1,500.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
@@ -214,7 +204,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
-          child: CustomHorizontalProductCard( // Removed const
+          child: CustomHorizontalProductCard(
             prodName: 'Mechanical Keyboard',
             prodPrice: '₱3,500.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
@@ -232,12 +222,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Column(
       children: [
         SizedBox(height: ScreenUtil().setHeight(10)),
-        // ------------------------------------------------
-        // 3 HARD CODED TO SHIP ITEMS
-        // ------------------------------------------------
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
-          child: CustomHorizontalProductCard( // Removed const
+          child: CustomHorizontalProductCard(
             prodName: 'Wireless Headset',
             prodPrice: '₱2,500.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
@@ -249,7 +236,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
-          child: CustomHorizontalProductCard( // Removed const
+          child: CustomHorizontalProductCard(
             prodName: 'Webcam 1080p',
             prodPrice: '₱1,200.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
@@ -261,7 +248,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
-          child: CustomHorizontalProductCard( // Removed const
+          child: CustomHorizontalProductCard(
             prodName: 'Laptop Stand',
             prodPrice: '₱800.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
@@ -279,12 +266,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Column(
       children: [
         SizedBox(height: ScreenUtil().setHeight(10)),
-        // ------------------------------------------------
-        // 4 HARD CODED TO RECEIVED ITEMS
-        // ------------------------------------------------
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
-          child: CustomHorizontalProductCard( // Removed const
+          child: CustomHorizontalProductCard(
             prodName: 'USB-C Hub',
             prodPrice: '₱1,500.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
@@ -296,7 +280,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
-          child: CustomHorizontalProductCard( // Removed const
+          child: CustomHorizontalProductCard(
             prodName: 'Monitor Arm',
             prodPrice: '₱2,000.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
@@ -308,7 +292,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
-          child: CustomHorizontalProductCard( // Removed const
+          child: CustomHorizontalProductCard(
             prodName: 'Desk Mat',
             prodPrice: '₱500.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
@@ -320,7 +304,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
-          child: CustomHorizontalProductCard( // Removed const
+          child: CustomHorizontalProductCard(
             prodName: 'Cable Organizer',
             prodPrice: '₱200.00',
             prodImage: 'assets/images/nubdexchange_logo.png',

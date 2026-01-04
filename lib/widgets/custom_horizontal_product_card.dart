@@ -10,7 +10,7 @@ class CustomHorizontalProductCard extends StatefulWidget {
   final String prodName;
   final String prodSize;
   final String prodPrice;
-  final String prodImage; // Added parameter
+  final String prodImage;
   final String btnName;
   final int numStars;
   int quantity;
@@ -23,7 +23,7 @@ class CustomHorizontalProductCard extends StatefulWidget {
     required this.prodName,
     required this.prodSize,
     required this.prodPrice,
-    required this.prodImage, // Required in constructor
+    required this.prodImage,
     this.btnName = 'Check Product',
     required this.numStars,
     this.quantity = 1,
@@ -45,7 +45,6 @@ class _CustomHorizontalProductCardState
       color: Colors.white,
       child: GestureDetector(
         onTap: () {
-          // Optional: Add navigation to detail screen on card tap
         },
         child: Container(
           padding: EdgeInsets.symmetric(
@@ -59,7 +58,6 @@ class _CustomHorizontalProductCardState
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Dynamic prodImage
               Container(
                 width: ScreenUtil().setWidth(80),
                 height: ScreenUtil().setHeight(80),
@@ -69,14 +67,14 @@ class _CustomHorizontalProductCardState
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Image.asset(
-                  widget.prodImage, // Using the passed image path
+                  widget.prodImage,
                   fit: BoxFit.contain,
                 ),
               ),
               SizedBox(
                 width: ScreenUtil().setWidth(10),
               ),
-              Expanded( // Added Expanded to prevent overflow
+              Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -166,8 +164,6 @@ class _CustomHorizontalProductCardState
                                     numStars: widget.numStars,
                                     quantity: widget.quantity,
                                     description: widget.description,
-                                    // Pass image if DetailScreen accepts it
-                                    // prodImage: widget.prodImage, 
                                   );
                                 }));
                               },

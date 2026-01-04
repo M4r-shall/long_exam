@@ -36,9 +36,6 @@ class _CartScreenState extends State<CartScreen> {
               child: ListView(
                 padding: EdgeInsets.zero,
                 children: [
-                  // ------------------------------------------------
-                  // Item 1
-                  // REMOVED 'const' keyword below
                   Padding(
                     padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
                     child: CustomHorizontalProductCard( 
@@ -51,9 +48,6 @@ class _CartScreenState extends State<CartScreen> {
                       btnName: 'Check Out',
                     ),
                   ),
-
-                  // Item 2
-                  // REMOVED 'const' keyword below
                   Padding(
                     padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
                     child: CustomHorizontalProductCard(
@@ -66,9 +60,6 @@ class _CartScreenState extends State<CartScreen> {
                       btnName: 'Check Out',
                     ),
                   ),
-
-                  // ... Repeat this for all other items in the list.
-                  // Make sure NO 'const' is before CustomHorizontalProductCard
                 ],
               ),
             ),

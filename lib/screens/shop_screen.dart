@@ -53,7 +53,7 @@ class _ShopScreenState extends State<ShopScreen> {
               alignment: Alignment.centerLeft,
               child: CustomText(
                 text:
-                    'Lorem ipsum odor amet, consectetuer adipiscing elit. Egestas vulputate mattis accumsan ridiculus semper aptent.',
+                    'Welcome to NUBD Exchange! Discover the best authentic sneakers and streetwear to elevate your daily fit. Browse our curated collection below.',
                 fontSize: ScreenUtil().setSp(12),
                 color: Colors.grey,
               ),
@@ -73,17 +73,13 @@ class _ShopScreenState extends State<ShopScreen> {
             SizedBox(
               height: ScreenUtil().setHeight(10),
             ),
-            
-            // ------------------------------------------------
-            // 5 HARD CODED BARKED ITEMS (Vertical Cards)
-            // ------------------------------------------------
             SizedBox(
               width: ScreenUtil().setWidth(1000),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    CustomVerticalProductCard( // Removed const
+                    CustomVerticalProductCard(
                       prodName: 'Nike Dunk Low',
                       prodPrice: '₱5,000.00',
                       prodSize: '9 US',
@@ -91,7 +87,7 @@ class _ShopScreenState extends State<ShopScreen> {
                       prodImage: 'assets/images/nubdexchange_logo.png',
                     ),
                     SizedBox(width: ScreenUtil().setWidth(10)),
-                    CustomVerticalProductCard( // Removed const
+                    CustomVerticalProductCard(
                       prodName: 'Adidas Samba',
                       prodPrice: '₱6,500.00',
                       prodSize: '10 US',
@@ -99,7 +95,7 @@ class _ShopScreenState extends State<ShopScreen> {
                       prodImage: 'assets/images/nubdexchange_logo.png',
                     ),
                     SizedBox(width: ScreenUtil().setWidth(10)),
-                    CustomVerticalProductCard( // Removed const
+                    CustomVerticalProductCard(
                       prodName: 'New Balance 530',
                       prodPrice: '₱4,800.00',
                       prodSize: '8.5 US',
@@ -107,7 +103,7 @@ class _ShopScreenState extends State<ShopScreen> {
                       prodImage: 'assets/images/nubdexchange_logo.png',
                     ),
                     SizedBox(width: ScreenUtil().setWidth(10)),
-                    CustomVerticalProductCard( // Removed const
+                    CustomVerticalProductCard(
                       prodName: 'Jordan 1 High',
                       prodPrice: '₱9,000.00',
                       prodSize: '11 US',
@@ -115,7 +111,7 @@ class _ShopScreenState extends State<ShopScreen> {
                       prodImage: 'assets/images/nubdexchange_logo.png',
                     ),
                     SizedBox(width: ScreenUtil().setWidth(10)),
-                    CustomVerticalProductCard( // Removed const
+                    CustomVerticalProductCard(
                       prodName: 'Vans Old Skool',
                       prodPrice: '₱3,500.00',
                       prodSize: '9 US',
@@ -142,13 +138,7 @@ class _ShopScreenState extends State<ShopScreen> {
             SizedBox(
               height: ScreenUtil().setHeight(10),
             ),
-
-            // ------------------------------------------------
-            // 10 HARD CODED ON SALE ITEMS (Horizontal Cards)
-            // ------------------------------------------------
-            
-            // Item 1
-            CustomHorizontalProductCard( // Removed const
+            CustomHorizontalProductCard(
               prodName: 'Sale Item 1',
               prodPrice: '₱100.00',
               btnName: 'View',
@@ -158,9 +148,7 @@ class _ShopScreenState extends State<ShopScreen> {
               prodImage: 'assets/images/nubdexchange_logo.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
-
-            // Item 2
-            CustomHorizontalProductCard( // Removed const
+            CustomHorizontalProductCard(
               prodName: 'Sale Item 2',
               prodPrice: '₱150.00',
               btnName: 'View',
@@ -171,8 +159,7 @@ class _ShopScreenState extends State<ShopScreen> {
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
 
-            // Item 3
-            CustomHorizontalProductCard( // Removed const
+            CustomHorizontalProductCard(
               prodName: 'Sale Item 3',
               prodPrice: '₱200.00',
               btnName: 'View',
@@ -182,9 +169,7 @@ class _ShopScreenState extends State<ShopScreen> {
               prodImage: 'assets/images/nubdexchange_logo.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
-
-            // Item 4
-            CustomHorizontalProductCard( // Removed const
+            CustomHorizontalProductCard(
               prodName: 'Sale Item 4',
               prodPrice: '₱250.00',
               btnName: 'View',
@@ -194,9 +179,7 @@ class _ShopScreenState extends State<ShopScreen> {
               prodImage: 'assets/images/nubdexchange_logo.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
-
-            // Item 5
-            CustomHorizontalProductCard( // Removed const
+            CustomHorizontalProductCard(
               prodName: 'Sale Item 5',
               prodPrice: '₱300.00',
               btnName: 'View',
@@ -206,9 +189,7 @@ class _ShopScreenState extends State<ShopScreen> {
               prodImage: 'assets/images/nubdexchange_logo.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
-
-            // Item 6
-            CustomHorizontalProductCard( // Removed const
+            CustomHorizontalProductCard(
               prodName: 'Sale Item 6',
               prodPrice: '₱350.00',
               btnName: 'View',
@@ -218,9 +199,7 @@ class _ShopScreenState extends State<ShopScreen> {
               prodImage: 'assets/images/nubdexchange_logo.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
-
-            // Item 7
-            CustomHorizontalProductCard( // Removed const
+            CustomHorizontalProductCard(
               prodName: 'Sale Item 7',
               prodPrice: '₱400.00',
               btnName: 'View',
@@ -230,9 +209,7 @@ class _ShopScreenState extends State<ShopScreen> {
               prodImage: 'assets/images/nubdexchange_logo.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
-
-            // Item 8
-            CustomHorizontalProductCard( // Removed const
+            CustomHorizontalProductCard(
               prodName: 'Sale Item 8',
               prodPrice: '₱450.00',
               btnName: 'View',
@@ -242,9 +219,7 @@ class _ShopScreenState extends State<ShopScreen> {
               prodImage: 'assets/images/nubdexchange_logo.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
-
-            // Item 9
-            CustomHorizontalProductCard( // Removed const
+            CustomHorizontalProductCard(
               prodName: 'Sale Item 9',
               prodPrice: '₱500.00',
               btnName: 'View',
@@ -254,9 +229,7 @@ class _ShopScreenState extends State<ShopScreen> {
               prodImage: 'assets/images/nubdexchange_logo.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
-
-            // Item 10
-            CustomHorizontalProductCard( // Removed const
+            CustomHorizontalProductCard(
               prodName: 'Sale Item 10',
               prodPrice: '₱550.00',
               btnName: 'View',
@@ -265,7 +238,7 @@ class _ShopScreenState extends State<ShopScreen> {
               numStars: 5,
               prodImage: 'assets/images/nubdexchange_logo.png',
             ),
-            SizedBox(height: ScreenUtil().setHeight(20)), // Bottom padding
+            SizedBox(height: ScreenUtil().setHeight(20)),
           ],
         ),
       ),

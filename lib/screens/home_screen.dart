@@ -33,8 +33,8 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false, //selected item
-        showUnselectedLabels: false, //unselected item
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         onTap: _onTappedBar,
         backgroundColor: Colors.white,
         items: const [
