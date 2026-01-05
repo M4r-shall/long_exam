@@ -80,42 +80,26 @@ class _ShopScreenState extends State<ShopScreen> {
                 child: Row(
                   children: [
                     CustomVerticalProductCard(
-                      prodName: 'Nike Dunk Low',
+                      prodName: 'Traditional Uniform',
                       prodPrice: '₱5,000.00',
-                      prodSize: '9 US',
+                      prodSize: 'S, M, L',
                       numStars: 5,
                       prodImage: 'assets/images/nubdexchange_logo.png',
                     ),
                     SizedBox(width: ScreenUtil().setWidth(10)),
                     CustomVerticalProductCard(
-                      prodName: 'Adidas Samba',
+                      prodName: 'Plushie',
                       prodPrice: '₱6,500.00',
-                      prodSize: '10 US',
+                      prodSize: 'Small, Large',
                       numStars: 4,
                       prodImage: 'assets/images/nubdexchange_logo.png',
                     ),
                     SizedBox(width: ScreenUtil().setWidth(10)),
                     CustomVerticalProductCard(
-                      prodName: 'New Balance 530',
-                      prodPrice: '₱4,800.00',
-                      prodSize: '8.5 US',
+                      prodName: 'Keychain',
+                      prodPrice: '₱800.00',
+                      prodSize: '2 inch',
                       numStars: 5,
-                      prodImage: 'assets/images/nubdexchange_logo.png',
-                    ),
-                    SizedBox(width: ScreenUtil().setWidth(10)),
-                    CustomVerticalProductCard(
-                      prodName: 'Jordan 1 High',
-                      prodPrice: '₱9,000.00',
-                      prodSize: '11 US',
-                      numStars: 5,
-                      prodImage: 'assets/images/nubdexchange_logo.png',
-                    ),
-                    SizedBox(width: ScreenUtil().setWidth(10)),
-                    CustomVerticalProductCard(
-                      prodName: 'Vans Old Skool',
-                      prodPrice: '₱3,500.00',
-                      prodSize: '9 US',
-                      numStars: 4,
                       prodImage: 'assets/images/nubdexchange_logo.png',
                     ),
                   ],
@@ -139,17 +123,17 @@ class _ShopScreenState extends State<ShopScreen> {
               height: ScreenUtil().setHeight(10),
             ),
             CustomHorizontalProductCard(
-              prodName: 'Sale Item 1',
+              prodName: 'NU mug',
               prodPrice: '₱100.00',
               btnName: 'View',
               isCart: false,
-              prodSize: 'M',
+              prodSize: 'one size',
               numStars: 4,
               prodImage: 'assets/images/nubdexchange_logo.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
-              prodName: 'Sale Item 2',
+              prodName: 'NU lanyard',
               prodPrice: '₱150.00',
               btnName: 'View',
               isCart: false,
@@ -160,7 +144,7 @@ class _ShopScreenState extends State<ShopScreen> {
             SizedBox(height: ScreenUtil().setHeight(10)),
 
             CustomHorizontalProductCard(
-              prodName: 'Sale Item 3',
+              prodName: 'NU shirt',
               prodPrice: '₱200.00',
               btnName: 'View',
               isCart: false,
@@ -170,7 +154,7 @@ class _ShopScreenState extends State<ShopScreen> {
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
-              prodName: 'Sale Item 4',
+              prodName: 'NU Hoodie',
               prodPrice: '₱250.00',
               btnName: 'View',
               isCart: false,
@@ -180,7 +164,7 @@ class _ShopScreenState extends State<ShopScreen> {
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
-              prodName: 'Sale Item 5',
+              prodName: 'NU Pants',
               prodPrice: '₱300.00',
               btnName: 'View',
               isCart: false,
@@ -190,7 +174,7 @@ class _ShopScreenState extends State<ShopScreen> {
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
-              prodName: 'Sale Item 6',
+              prodName: 'NU Stickers',
               prodPrice: '₱350.00',
               btnName: 'View',
               isCart: false,
@@ -200,7 +184,7 @@ class _ShopScreenState extends State<ShopScreen> {
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
-              prodName: 'Sale Item 7',
+              prodName: 'NU Blue Shirt',
               prodPrice: '₱400.00',
               btnName: 'View',
               isCart: false,
@@ -210,7 +194,7 @@ class _ShopScreenState extends State<ShopScreen> {
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
-              prodName: 'Sale Item 8',
+              prodName: 'NU Plushie',
               prodPrice: '₱450.00',
               btnName: 'View',
               isCart: false,
@@ -220,7 +204,7 @@ class _ShopScreenState extends State<ShopScreen> {
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
-              prodName: 'Sale Item 9',
+              prodName: 'NU Tumbler',
               prodPrice: '₱500.00',
               btnName: 'View',
               isCart: false,
@@ -230,7 +214,7 @@ class _ShopScreenState extends State<ShopScreen> {
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
-              prodName: 'Sale Item 10',
+              prodName: 'NU Watch',
               prodPrice: '₱550.00',
               btnName: 'View',
               isCart: false,

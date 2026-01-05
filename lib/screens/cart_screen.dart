@@ -39,7 +39,7 @@ class _CartScreenState extends State<CartScreen> {
                   Padding(
                     padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
                     child: CustomHorizontalProductCard( 
-                      prodName: 'Wireless Mouse',
+                      prodName: 'NU tumbler',
                       prodPrice: '₱500.00',
                       prodSize: 'One Size',
                       numStars: 5,
@@ -51,7 +51,7 @@ class _CartScreenState extends State<CartScreen> {
                   Padding(
                     padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
                     child: CustomHorizontalProductCard(
-                      prodName: 'Mechanical Keyboard',
+                      prodName: 'NU Hoodie',
                       prodPrice: '₱1,200.00',
                       prodSize: 'Full',
                       numStars: 5,

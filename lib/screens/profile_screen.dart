@@ -91,39 +91,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     childAspectRatio: 0.75,
                     children: [
                       CustomVerticalProductCard(
-                        prodName: 'Nike Air Max',
+                        prodName: 'NU Black Shirt',
                         prodPrice: '₱4,500.00',
                         prodImage: 'assets/images/nubdexchange_logo.png',
-                        prodSize: '9 US',
+                        prodSize: 'S, M, L',
                         numStars: 5,
                       ),
                       CustomVerticalProductCard(
-                        prodName: 'Adidas Ultraboost',
+                        prodName: 'NU White Shirt',
                         prodPrice: '₱8,000.00',
                         prodImage: 'assets/images/nubdexchange_logo.png',
-                        prodSize: '10 US',
+                        prodSize: 'S, M, L',
                         numStars: 4,
                       ),
                       CustomVerticalProductCard(
-                        prodName: 'Puma Suede',
+                        prodName: 'NU Mug',
                         prodPrice: '₱3,200.00',
                         prodImage: 'assets/images/nubdexchange_logo.png',
-                        prodSize: '8.5 US',
+                        prodSize: '12 oz',
                         numStars: 4,
                       ),
                       CustomVerticalProductCard(
-                        prodName: 'Converse Chucks',
+                        prodName: 'NU Lanyard',
                         prodPrice: '₱3,500.00',
                         prodImage: 'assets/images/nubdexchange_logo.png',
-                        prodSize: '9 US',
+                        prodSize: 'one size',
                         numStars: 5,
-                      ),
-                      CustomVerticalProductCard(
-                        prodName: 'Vans Slip-On',
-                        prodPrice: '₱2,800.00',
-                        prodImage: 'assets/images/nubdexchange_logo.png',
-                        prodSize: '9 US',
-                        numStars: 4,
                       ),
                     ],
                   ),
@@ -193,7 +186,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
           child: CustomHorizontalProductCard(
-            prodName: 'Gaming Mouse',
+            prodName: 'NU Layard',
             prodPrice: '₱1,500.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
             prodSize: 'N/A',
@@ -205,7 +198,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
           child: CustomHorizontalProductCard(
-            prodName: 'Mechanical Keyboard',
+            prodName: 'NU Windbreaker',
             prodPrice: '₱3,500.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
             prodSize: 'Full',
@@ -225,7 +218,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
           child: CustomHorizontalProductCard(
-            prodName: 'Wireless Headset',
+            prodName: 'NU Rain coat',
             prodPrice: '₱2,500.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
             prodSize: 'M',
@@ -269,7 +262,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
           child: CustomHorizontalProductCard(
-            prodName: 'USB-C Hub',
+            prodName: 'NU Pants',
             prodPrice: '₱1,500.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
             prodSize: 'N/A',
@@ -281,7 +274,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
           child: CustomHorizontalProductCard(
-            prodName: 'Monitor Arm',
+            prodName: 'NU PE Shirt',
             prodPrice: '₱2,000.00',
             prodImage: 'assets/images/nubdexchange_logo.png',
             prodSize: 'N/A',

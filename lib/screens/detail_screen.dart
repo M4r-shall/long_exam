@@ -134,9 +134,9 @@ class DetailScreen extends StatelessWidget {
               SizedBox(height: ScreenUtil().setHeight(8)),
               Row(
                 children: [
-                  _colorDot(Colors.red),
+                  _colorDot(const Color.fromARGB(255, 244, 219, 54)),
                   const SizedBox(width: 8),
-                  _colorDot(Colors.green),
+                  _colorDot(const Color.fromARGB(255, 0, 0, 0)),
                   const SizedBox(width: 8),
                   _colorDot(Colors.blue),
                 ],
