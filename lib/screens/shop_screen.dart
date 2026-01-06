@@ -17,8 +17,12 @@ class _ShopScreenState extends State<ShopScreen> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-        margin: EdgeInsets.fromLTRB(ScreenUtil().setSp(20),
-            ScreenUtil().setSp(60), ScreenUtil().setSp(20), 0),
+        margin: EdgeInsets.fromLTRB(
+          ScreenUtil().setSp(20),
+          ScreenUtil().setSp(60),
+          ScreenUtil().setSp(20),
+          0,
+        ),
         color: Colors.white,
         width: ScreenUtil().screenWidth,
         child: Column(
@@ -34,9 +38,7 @@ class _ShopScreenState extends State<ShopScreen> {
                 ),
               ),
             ),
-            SizedBox(
-              height: ScreenUtil().setHeight(10),
-            ),
+            SizedBox(height: ScreenUtil().setHeight(10)),
             Align(
               alignment: Alignment.centerLeft,
               child: CustomText(
@@ -46,9 +48,7 @@ class _ShopScreenState extends State<ShopScreen> {
                 fontWeight: FontWeight.w900,
               ),
             ),
-            SizedBox(
-              height: ScreenUtil().setHeight(10),
-            ),
+            SizedBox(height: ScreenUtil().setHeight(10)),
             Align(
               alignment: Alignment.centerLeft,
               child: CustomText(
@@ -58,9 +58,7 @@ class _ShopScreenState extends State<ShopScreen> {
                 color: Colors.grey,
               ),
             ),
-            SizedBox(
-              height: ScreenUtil().setHeight(10),
-            ),
+            SizedBox(height: ScreenUtil().setHeight(10)),
             Align(
               alignment: Alignment.centerLeft,
               child: CustomText(
@@ -70,9 +68,7 @@ class _ShopScreenState extends State<ShopScreen> {
                 fontWeight: FontWeight.w900,
               ),
             ),
-            SizedBox(
-              height: ScreenUtil().setHeight(10),
-            ),
+            SizedBox(height: ScreenUtil().setHeight(10)),
             SizedBox(
               width: ScreenUtil().setWidth(1000),
               child: SingleChildScrollView(
@@ -80,36 +76,42 @@ class _ShopScreenState extends State<ShopScreen> {
                 child: Row(
                   children: [
                     CustomVerticalProductCard(
-                      prodName: 'Traditional Uniform',
+                      prodName: 'NU Cap',
                       prodPrice: '₱5,000.00',
                       prodSize: 'S, M, L',
                       numStars: 5,
-                      prodImage: 'assets/images/nubdexchange_logo.png',
+                      prodImage: 'assets/images/bluecap.png',
                     ),
                     SizedBox(width: ScreenUtil().setWidth(10)),
                     CustomVerticalProductCard(
-                      prodName: 'Plushie',
+                      prodName: 'NU Gold Shirt',
                       prodPrice: '₱6,500.00',
                       prodSize: 'Small, Large',
                       numStars: 4,
-                      prodImage: 'assets/images/nubdexchange_logo.png',
+                      prodImage: 'assets/images/nugold.png',
                     ),
                     SizedBox(width: ScreenUtil().setWidth(10)),
                     CustomVerticalProductCard(
                       prodName: 'Keychain',
                       prodPrice: '₱800.00',
-                      prodSize: '2 inch',
+                      prodSize: 'Small',
                       numStars: 5,
-                      prodImage: 'assets/images/nubdexchange_logo.png',
+                      prodImage: 'assets/images/dogs.png',
+                    ),
+                    SizedBox(width: ScreenUtil().setWidth(10)),
+                    CustomVerticalProductCard(
+                      prodName: 'NU Necktie',
+                      prodPrice: '₱800.00',
+                      prodSize: 'S',
+                      numStars: 5,
+                      prodImage: 'assets/images/bluejack.png',
                     ),
                   ],
                 ),
               ),
             ),
-            
-            SizedBox(
-              height: ScreenUtil().setHeight(10),
-            ),
+
+            SizedBox(height: ScreenUtil().setHeight(10)),
             Align(
               alignment: Alignment.centerLeft,
               child: CustomText(
@@ -119,9 +121,7 @@ class _ShopScreenState extends State<ShopScreen> {
                 fontWeight: FontWeight.w900,
               ),
             ),
-            SizedBox(
-              height: ScreenUtil().setHeight(10),
-            ),
+            SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
               prodName: 'NU mug',
               prodPrice: '₱100.00',
@@ -129,7 +129,7 @@ class _ShopScreenState extends State<ShopScreen> {
               isCart: false,
               prodSize: 'one size',
               numStars: 4,
-              prodImage: 'assets/images/nubdexchange_logo.png',
+              prodImage: 'assets/images/bulldogsblack.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
@@ -139,7 +139,7 @@ class _ShopScreenState extends State<ShopScreen> {
               isCart: false,
               prodSize: 'L',
               numStars: 5,
-              prodImage: 'assets/images/nubdexchange_logo.png',
+              prodImage: 'assets/images/lace.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
 
@@ -148,9 +148,9 @@ class _ShopScreenState extends State<ShopScreen> {
               prodPrice: '₱200.00',
               btnName: 'View',
               isCart: false,
-              prodSize: 'S',
+              prodSize: 'S, M, L',
               numStars: 3,
-              prodImage: 'assets/images/nubdexchange_logo.png',
+              prodImage: 'assets/images/bplain.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
@@ -160,7 +160,7 @@ class _ShopScreenState extends State<ShopScreen> {
               isCart: false,
               prodSize: 'XL',
               numStars: 4,
-              prodImage: 'assets/images/nubdexchange_logo.png',
+              prodImage: 'assets/images/dogs.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
@@ -170,7 +170,7 @@ class _ShopScreenState extends State<ShopScreen> {
               isCart: false,
               prodSize: 'M',
               numStars: 5,
-              prodImage: 'assets/images/nubdexchange_logo.png',
+              prodImage: 'assets/images/ballshirt.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
@@ -180,7 +180,7 @@ class _ShopScreenState extends State<ShopScreen> {
               isCart: false,
               prodSize: 'L',
               numStars: 4,
-              prodImage: 'assets/images/nubdexchange_logo.png',
+              prodImage: 'assets/images/bluecap.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
@@ -190,7 +190,7 @@ class _ShopScreenState extends State<ShopScreen> {
               isCart: false,
               prodSize: 'S',
               numStars: 3,
-              prodImage: 'assets/images/nubdexchange_logo.png',
+              prodImage: 'assets/images/bplain.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
@@ -200,7 +200,7 @@ class _ShopScreenState extends State<ShopScreen> {
               isCart: false,
               prodSize: 'M',
               numStars: 5,
-              prodImage: 'assets/images/nubdexchange_logo.png',
+              prodImage: 'assets/images/bulldogsblack.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
@@ -208,9 +208,9 @@ class _ShopScreenState extends State<ShopScreen> {
               prodPrice: '₱500.00',
               btnName: 'View',
               isCart: false,
-              prodSize: 'L',
+              prodSize: '32oz',
               numStars: 4,
-              prodImage: 'assets/images/nubdexchange_logo.png',
+              prodImage: 'assets/images/dogs.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(10)),
             CustomHorizontalProductCard(
@@ -218,9 +218,9 @@ class _ShopScreenState extends State<ShopScreen> {
               prodPrice: '₱550.00',
               btnName: 'View',
               isCart: false,
-              prodSize: 'XL',
+              prodSize: 'Small',
               numStars: 5,
-              prodImage: 'assets/images/nubdexchange_logo.png',
+              prodImage: 'assets/images/nugold.png',
             ),
             SizedBox(height: ScreenUtil().setHeight(20)),
           ],

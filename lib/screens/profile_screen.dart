@@ -54,7 +54,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               color: Colors.grey,
                             ),
                             CustomText(
-                              text: '3000',
+                              text: '300000000000',
                               fontSize: ScreenUtil().setSp(12),
                               color: NU_YELLOW,
                               fontWeight: FontWeight.bold,
@@ -93,28 +93,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       CustomVerticalProductCard(
                         prodName: 'NU Black Shirt',
                         prodPrice: '₱4,500.00',
-                        prodImage: 'assets/images/nubdexchange_logo.png',
+                        prodImage: 'assets/images/bulldogsblack.png',
                         prodSize: 'S, M, L',
                         numStars: 5,
                       ),
                       CustomVerticalProductCard(
                         prodName: 'NU White Shirt',
                         prodPrice: '₱8,000.00',
-                        prodImage: 'assets/images/nubdexchange_logo.png',
+                        prodImage: 'assets/images/bplain.png',
                         prodSize: 'S, M, L',
                         numStars: 4,
                       ),
                       CustomVerticalProductCard(
                         prodName: 'NU Mug',
                         prodPrice: '₱3,200.00',
-                        prodImage: 'assets/images/nubdexchange_logo.png',
+                        prodImage: 'assets/images/dogs.png',
                         prodSize: '12 oz',
                         numStars: 4,
                       ),
                       CustomVerticalProductCard(
                         prodName: 'NU Lanyard',
                         prodPrice: '₱3,500.00',
-                        prodImage: 'assets/images/nubdexchange_logo.png',
+                        prodImage: 'assets/images/lace.png',
                         prodSize: 'one size',
                         numStars: 5,
                       ),
@@ -188,7 +188,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: CustomHorizontalProductCard(
             prodName: 'NU Layard',
             prodPrice: '₱1,500.00',
-            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodImage: 'assets/images/lace.png',
             prodSize: 'N/A',
             numStars: 5,
             isCheckout: true,
@@ -200,7 +200,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: CustomHorizontalProductCard(
             prodName: 'NU Windbreaker',
             prodPrice: '₱3,500.00',
-            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodImage: 'assets/images/bluejack.png',
             prodSize: 'Full',
             numStars: 5,
             isCheckout: true,
@@ -220,7 +220,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: CustomHorizontalProductCard(
             prodName: 'NU Rain coat',
             prodPrice: '₱2,500.00',
-            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodImage: 'assets/images/ballshirt.png',
             prodSize: 'M',
             numStars: 4,
             isCheckout: true,
@@ -230,9 +230,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
           child: CustomHorizontalProductCard(
-            prodName: 'Webcam 1080p',
+            prodName: 'NU Cap',
             prodPrice: '₱1,200.00',
-            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodImage: 'assets/images/bluecap.png',
             prodSize: 'N/A',
             numStars: 4,
             isCheckout: true,
@@ -242,9 +242,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
           child: CustomHorizontalProductCard(
-            prodName: 'Laptop Stand',
+            prodName: 'NU Shirt',
             prodPrice: '₱800.00',
-            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodImage: 'assets/images/nugold.png',
             prodSize: 'N/A',
             numStars: 5,
             isCheckout: true,
@@ -264,7 +264,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: CustomHorizontalProductCard(
             prodName: 'NU Pants',
             prodPrice: '₱1,500.00',
-            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodImage: 'assets/images/dogs.png',
             prodSize: 'N/A',
             numStars: 4,
             isCheckout: true,
@@ -276,7 +276,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: CustomHorizontalProductCard(
             prodName: 'NU PE Shirt',
             prodPrice: '₱2,000.00',
-            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodImage: 'assets/images/bplain.png',
             prodSize: 'N/A',
             numStars: 5,
             isCheckout: true,
@@ -286,9 +286,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
           child: CustomHorizontalProductCard(
-            prodName: 'Desk Mat',
+            prodName: 'NU Blue Shirt',
             prodPrice: '₱500.00',
-            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodImage: 'assets/images/nugold.png',
             prodSize: 'XL',
             numStars: 5,
             isCheckout: true,
@@ -298,9 +298,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         Padding(
           padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
           child: CustomHorizontalProductCard(
-            prodName: 'Cable Organizer',
+            prodName: 'NU Black Shirt',
             prodPrice: '₱200.00',
-            prodImage: 'assets/images/nubdexchange_logo.png',
+            prodImage: 'assets/images/bulldogsblack.png',
             prodSize: 'N/A',
             numStars: 4,
             isCheckout: true,
