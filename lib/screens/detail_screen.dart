@@ -35,7 +35,7 @@ class DetailScreen extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(16),
                     child: Image.network(
-                      'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/99486859-0ff3-46b4-949b-2d16af2ad421/custom-nike-dunk-low-by-you-su23.png',
+                      'https://cdn.photographylife.com/wp-content/uploads/2014/06/Nikon-D810-Image-Sample-6.jpg',
                       height: ScreenUtil().setHeight(200),
                       width: double.infinity,
                       fit: BoxFit.cover,
