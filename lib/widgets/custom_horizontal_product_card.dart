@@ -45,6 +45,18 @@ class _CustomHorizontalProductCardState
       color: Colors.white,
       child: GestureDetector(
         onTap: () {
+          // Navigate to DetailScreen when the whole card is tapped
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return DetailScreen(
+              prodName: widget.prodName,
+              prodSize: widget.prodSize,
+              prodPrice: widget.prodPrice,
+              numStars: widget.numStars,
+              quantity: widget.quantity,
+              description: widget.description,
+              prodImage: widget.prodImage, // Passing the image correctly
+            );
+          }));
         },
         child: Container(
           padding: EdgeInsets.symmetric(
@@ -164,6 +176,7 @@ class _CustomHorizontalProductCardState
                                     numStars: widget.numStars,
                                     quantity: widget.quantity,
                                     description: widget.description,
+                                    prodImage: widget.prodImage, // Passing image
                                   );
                                 }));
                               },

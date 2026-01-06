@@ -31,6 +31,7 @@ class CustomVerticalProductCard extends StatelessWidget {
       elevation: 1,
       child: GestureDetector(
         onTap: () {
+          // Navigate to DetailScreen passing the image correctly
           Navigator.push(context, MaterialPageRoute(builder: (context) {
             return DetailScreen(
               prodName: prodName,
@@ -39,11 +40,13 @@ class CustomVerticalProductCard extends StatelessWidget {
               numStars: numStars,
               quantity: quantity,
               description: description,
+              prodImage: prodImage, // <--- Added this line!
             );
           }));
         },
         child: Container(
           width: ScreenUtil().setWidth(140),
+          // Height set to 220 to prevent overflow (as fixed previously)
           height: ScreenUtil().setHeight(220), 
           padding: EdgeInsets.symmetric(
               horizontal: ScreenUtil().setWidth(10),
@@ -54,6 +57,7 @@ class CustomVerticalProductCard extends StatelessWidget {
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween, // Helps spacing
             children: [
               Container(
                 height: ScreenUtil().setHeight(80),

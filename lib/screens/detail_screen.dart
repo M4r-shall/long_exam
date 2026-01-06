@@ -7,6 +7,7 @@ class DetailScreen extends StatelessWidget {
   final String prodName;
   final String prodSize;
   final String prodPrice;
+  final String prodImage; // Added parameter
   final int numStars;
   final int quantity;
   final String description;
@@ -16,6 +17,7 @@ class DetailScreen extends StatelessWidget {
     required this.prodName,
     required this.prodSize,
     required this.prodPrice,
+    required this.prodImage, // Required in constructor
     required this.numStars,
     required this.quantity,
     this.description = 'Lorem ipsum',
@@ -34,19 +36,15 @@ class DetailScreen extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(16),
-                    child: Image.network(
-                      'https://cdn.photographylife.com/wp-content/uploads/2014/06/Nikon-D810-Image-Sample-6.jpg',
-                      height: ScreenUtil().setHeight(200),
+                    child: Container(
+                      height: ScreenUtil().setHeight(250),
                       width: double.infinity,
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) {
-                        return Container(
-                          height: ScreenUtil().setHeight(200),
-                          width: double.infinity,
-                          color: Colors.grey[300],
-                          child: const Icon(Icons.broken_image, size: 50, color: Colors.grey),
-                        );
-                      },
+                      color: Colors.grey[100],
+                      padding: const EdgeInsets.all(20),
+                      child: Image.asset(
+                        prodImage,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
                   Positioned(
@@ -57,14 +55,21 @@ class DetailScreen extends StatelessWidget {
                         Navigator.pop(context);
                       },
                       child: Container(
-                        padding: const EdgeInsets.all(4), 
+                        padding: const EdgeInsets.all(8),
                         decoration: const BoxDecoration(
-                           color: Colors.white54,
-                           shape: BoxShape.circle,
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 4,
+                              offset: Offset(0, 2),
+                            )
+                          ],
                         ),
                         child: Icon(
                           Icons.keyboard_backspace,
-                          size: ScreenUtil().setSp(30),
+                          size: ScreenUtil().setSp(24),
                           color: Colors.black,
                         ),
                       ),
@@ -125,6 +130,13 @@ class DetailScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(height: ScreenUtil().setHeight(5)),
+              CustomText(
+                 text: 'Size: $prodSize  |  Qty: $quantity',
+                 fontSize: ScreenUtil().setSp(14),
+                 color: Colors.grey,
+              ),
+              
               SizedBox(height: ScreenUtil().setHeight(20)),
               CustomText(
                 text: 'Available color versions:',
@@ -149,12 +161,15 @@ class DetailScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
               SizedBox(height: ScreenUtil().setHeight(5)),
-              CustomText(
-                text: description,
-                fontSize: ScreenUtil().setSp(12),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: CustomText(
+                    text: description,
+                    fontSize: ScreenUtil().setSp(12),
+                  ),
+                ),
               ),
-              SizedBox(height: ScreenUtil().setHeight(16)),
-              const Spacer(),
+              SizedBox(height: ScreenUtil().setHeight(10)),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
