@@ -96,6 +96,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         prodImage: 'assets/images/bulldogsblack.png',
                         prodSize: 'S, M, L',
                         numStars: 5,
+                        description: 'Bright gold shirt made from 100% cotton. Perfect for school spirit days.',
                       ),
                       CustomVerticalProductCard(
                         prodName: 'NU White Shirt',
@@ -103,6 +104,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         prodImage: 'assets/images/bplain.png',
                         prodSize: 'S, M, L',
                         numStars: 4,
+                        description: 'Bright gold shirt made from 100% cotton. Perfect for school spirit days.',
                       ),
                       CustomVerticalProductCard(
                         prodName: 'NU Mug',
@@ -110,6 +112,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         prodImage: 'assets/images/dogs.png',
                         prodSize: '12 oz',
                         numStars: 4,
+                        description: 'Bright gold shirt made from 100% cotton. Perfect for school spirit days.',
                       ),
                       CustomVerticalProductCard(
                         prodName: 'NU Lanyard',
@@ -117,6 +120,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         prodImage: 'assets/images/lace.png',
                         prodSize: 'one size',
                         numStars: 5,
+                        description: 'Bright gold shirt made from 100% cotton. Perfect for school spirit days.',
                       ),
                     ],
                   ),

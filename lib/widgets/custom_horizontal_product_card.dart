@@ -44,20 +44,21 @@ class _CustomHorizontalProductCardState
     return Card(
       color: Colors.white,
       child: GestureDetector(
-        onTap: () {
-          // Navigate to DetailScreen when the whole card is tapped
-          Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return DetailScreen(
-              prodName: widget.prodName,
-              prodSize: widget.prodSize,
-              prodPrice: widget.prodPrice,
-              numStars: widget.numStars,
-              quantity: widget.quantity,
-              description: widget.description,
-              prodImage: widget.prodImage, // Passing the image correctly
-            );
-          }));
-        },
+        onTap: widget.isCheckout
+            ? null
+            : () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return DetailScreen(
+                    prodName: widget.prodName,
+                    prodSize: widget.prodSize,
+                    prodPrice: widget.prodPrice,
+                    numStars: widget.numStars,
+                    quantity: widget.quantity,
+                    description: widget.description,
+                    prodImage: widget.prodImage,
+                  );
+                }));
+              },
         child: Container(
           padding: EdgeInsets.symmetric(
             horizontal: ScreenUtil().setWidth(15),
@@ -176,7 +177,7 @@ class _CustomHorizontalProductCardState
                                     numStars: widget.numStars,
                                     quantity: widget.quantity,
                                     description: widget.description,
-                                    prodImage: widget.prodImage, // Passing image
+                                    prodImage: widget.prodImage,
                                   );
                                 }));
                               },
